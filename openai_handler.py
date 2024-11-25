@@ -17,13 +17,9 @@ class Openai:
             max_tokens=100,
             temperature=0.1,
             messages=[
-                {"role": "system","content": f"Você é um otaku que ama animes e irá indicar amigos para quem conversar com você.  use essas inforações para responder o usuário: {conteudo}. historico de conversa {history}"},
+                {"role": "system","content": "Você é um assistente virtual que irá ajudar o usuário a combater a procrastinação, e melhorar os hábitos de estudo e produtividade. Dê dicas, crie cronogramas, e motive o usuário na concentração de suas tarefas"},
                 {"role": "user", "content": message},
             ],
         )
         print(f"resposta : {response.choices[0].message.content} ")
         return  response.choices[0].message.content
-
-
-
-
